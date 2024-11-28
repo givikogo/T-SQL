@@ -8,8 +8,6 @@ INSERT INTO givi
 	(ID, Fname)
 VALUES 
 	(1,'kogo'),
-
-	INSERT INTO givi
-	(ID, Fname)
-VALUES 
-	(3,'logo3');
+	(2,'Logo');
+	(3,'Logo3'),
+	
