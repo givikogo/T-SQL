@@ -12,4 +12,4 @@ VALUES
 	INSERT INTO givi
 	(ID, Fname)
 VALUES 
-	(2,'logo');
+	(3,'logo3');
