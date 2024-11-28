@@ -7,4 +7,9 @@ ID INT NOT NULL, Fname VARCHAR(25)
 INSERT INTO givi
 	(ID, Fname)
 VALUES 
-	(1,'kogo');
+	(1,'kogo'),
+
+	INSERT INTO givi
+	(ID, Fname)
+VALUES 
+	(2,'logo');
