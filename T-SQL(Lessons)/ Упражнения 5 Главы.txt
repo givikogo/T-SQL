@@ -5,14 +5,14 @@
 ____________________________________________________________________________
 |          customers                    |           orders                  |
 |_______________________________________|___________________________________|
-|customers orders                       |	orderid integer not null    |
-|customerid char(5) not null 		|	customerid char(5) not null |
-|companyname varchar(40) not null 	|	orderdate date null	    |
-|contactname char(30) null 	        |	shippeddate date null       |
-|address varchar(60) null             	|	freight money null          |
-|city char(15) null 		        |	shipname varchar(40) null   |
-|phone char(24) null 		        |	shipaddress varchar(60) null|
-|fax char(24) null 		        |	quantity integer null       |
+|customerid char(5) not null		|	orderid integer not null    |
+|companyname varchar(40) not null 	|	customerid char(5) not null |
+|contactname char(30) null 	        |	orderdate date null	    |
+|address varchar(60) null             	|	shippeddate date null       |
+|city char(15) null 		        |	freight money null          |
+|phone char(24) null 		        |	shipname varchar(40) null   |
+|fax char(24) null 		        |	shipaddress varchar(60) null|
+|                                       |	quantity integer null       |
 |_______________________________________|___________________________________|	
 
 Упражнение 5.7
