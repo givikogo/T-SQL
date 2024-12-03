@@ -1,0 +1,2 @@
+ALTER TABLE orders
+ADD CONSTRAINT chk_quantity CHECK (quantity BETWEEN 1 AND 30);
