@@ -1,0 +1,2 @@
+ALTER TABLE orders
+DROP CONSTRAINT pk_orderid;
