@@ -1,1 +1,1 @@
-//test restart
+/*set*restart *\
