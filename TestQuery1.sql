@@ -17,4 +17,4 @@ CREATE TABLE orders(
             shipname VARCHAR(40) NULL,
             shipaddress VARCHAR(60) NULL,
             quantity INT NULL
-            );
+            ); /*dnajskdnjkadnkasnda*\
