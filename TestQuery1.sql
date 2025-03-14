@@ -30,3 +30,43 @@ VALUES (
     'Imereti'
 );
 SELECT*FROM customers;
+CREATE TABLE orders (
+    orderid INT PRIMARY KEY,
+    customerid INT,
+    orderdate DATE,
+    shippeddate DATE,
+    status VARCHAR(50),
+    FOREIGN KEY (customerid) REFERENCES customers(customerid)
+);
+INSERT INTO orders (
+    orderid, 
+    customerid, 
+    orderdate, 
+    shippeddate, 
+    status
+) 
+VALUES (
+    1, 
+    1,  -- Ссылается на customerid из таблицы customers
+    '2025-03-14', 
+    '2025-03-16', 
+    'Shipped'
+);
+
+SELECT*FROM customers where customerid = 1;
+SELECT 
+    orders.orderid, 
+    orders.orderdate, 
+    orders.shippeddate, 
+    orders.status, 
+    customers.customerid, 
+    customers.contactname, 
+    customers.companyname, 
+    customers.address, 
+    customers.city, 
+    customers.phone, 
+    customers.fax, 
+    customers.region
+FROM orders
+LEFT JOIN customers ON orders.customerid = customers.customerid;
+
