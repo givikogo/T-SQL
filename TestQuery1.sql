@@ -1,20 +1,32 @@
-use LessonsBD;
-CREATE TABLE customers(
-            customerid CHAR(5) NOT NULL,
-            companyname VARCHAR(40) NOT NULL,
-            contactname CHAR(30) NULL,
-            address varchar(60) NULL,
-            city CHAR(15) NULL,
-            phone CHAR(24) NULL,
-            fax CHAR(24) NULL
-            );
-CREATE TABLE orders(
-            orderid INT NOT NULL,
-            customerid CHAR(5) NOT NULL,
-            orderdate DATE NULL,
-            shippeddate DATE NULL,
-            freight MONEY NULL,
-            shipname VARCHAR(40) NULL,
-            shipaddress VARCHAR(60) NULL,
-            quantity INT NULL
-            ); /*dnajskdnjkadnkasnda*\
+CREATE TABLE customers (
+    customerid INT PRIMARY KEY,
+    contactname VARCHAR(100),
+    companyname VARCHAR(100),
+    address VARCHAR(255),
+    city VARCHAR(100),
+    phone VARCHAR(20),
+    fax VARCHAR(20),
+    region VARCHAR(50)
+);
+
+INSERT INTO customers(
+    customerid, 
+    contactname, 
+    companyname, 
+    address, 
+    city, 
+    phone, 
+    fax, 
+    region
+) 
+VALUES (
+    1, 
+    'Maxy', 
+    'Coca-Cola', 
+    'wm.nino.street', 
+    'Kutaisi', 
+    '+995551222650', 
+    '11152222', 
+    'Imereti'
+);
+SELECT*FROM customers;
