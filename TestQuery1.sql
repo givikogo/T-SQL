@@ -32,6 +32,7 @@ VALUES (
 SELECT*FROM customers;
 CREATE TABLE orders (
     orderid INT PRIMARY KEY,
+    ordername varchar(100),
     customerid INT,
     orderdate DATE,
     shippeddate DATE,
@@ -40,6 +41,7 @@ CREATE TABLE orders (
 );
 INSERT INTO orders (
     orderid, 
+    ordername,
     customerid, 
     orderdate, 
     shippeddate, 
@@ -47,18 +49,21 @@ INSERT INTO orders (
 ) 
 VALUES (
     1, 
+    'Liza',
     1,  -- Ссылается на customerid из таблицы customers
     '2025-03-14', 
     '2025-03-16', 
     'Shipped'
 );
 
+DROP TABLE orders;
 SELECT*FROM customers where customerid = 1;
 SELECT 
     orders.orderid, 
     orders.orderdate, 
     orders.shippeddate, 
     orders.status, 
+    orders.ordername,
     customers.customerid, 
     customers.contactname, 
     customers.companyname, 
@@ -68,5 +73,5 @@ SELECT
     customers.fax, 
     customers.region
 FROM orders
-LEFT JOIN customers ON orders.customerid = customers.customerid;
+CROSS JOIN customers;
 
